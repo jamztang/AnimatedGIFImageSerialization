@@ -29,19 +29,6 @@
 - (BOOL)application:(__unused UIApplication *)application
 didFinishLaunchingWithOptions:(__unused NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-
-    UIViewController *viewController = [[UIViewController alloc] init];
-    self.window.rootViewController = viewController;
-
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:viewController.view.bounds];
-    imageView.contentMode = UIViewContentModeCenter;
-    imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    imageView.image = [UIImage imageNamed:@"animated.gif"];
-    [viewController.view addSubview:imageView];
-
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
 
     return YES;
 }

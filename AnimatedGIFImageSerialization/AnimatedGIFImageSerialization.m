@@ -147,12 +147,26 @@ static inline void animated_gif_swizzleSelector(Class class, SEL originalSelecto
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         @autoreleasepool {
+
+
+            //Exchange XIB loading implementation
+            Method m1 = class_getInstanceMethod(NSClassFromString(@"UIImageNibPlaceholder"), @selector(initWithCoder:));
+            Method m2 = class_getInstanceMethod(self, @selector(initWithCoderH568:));
+            method_exchangeImplementations(m1, m2);
+
+
             animated_gif_swizzleSelector(self, @selector(initWithData:scale:), @selector(animated_gif_initWithData:scale:));
             animated_gif_swizzleSelector(self, @selector(initWithData:), @selector(animated_gif_initWithData:));
             animated_gif_swizzleSelector(self, @selector(initWithContentsOfFile:), @selector(animated_gif_initWithContentsOfFile:));
             animated_gif_swizzleSelector(object_getClass((id)self), @selector(imageNamed:), @selector(animated_gif_imageNamed:));
         }
     });
+}
+
+- (id)initWithCoderH568:(NSCoder *)aDecoder {
+	NSString *resourceName = [aDecoder decodeObjectForKey:@"UIResourceName"];
+    UIImage *image = [[self class] imageNamed:resourceName];
+    return image;
 }
 
 + (UIImage *)animated_gif_imageNamed:(NSString *)name __attribute__((objc_method_family(new))){
