@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1A2CCFEF18E2674E009B50FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A2CCFEE18E2674E009B50FF /* Main.storyboard */; };
 		1A2CCFF218E267C9009B50FF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CCFF118E267C9009B50FF /* ViewController.m */; };
+		1A6CA64818E46F13000701FB /* AnimatedGIFImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6CA64718E46F13000701FB /* AnimatedGIFImageView.m */; };
 		F82E75AF18ABDC4E002D596E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F82E75AE18ABDC4E002D596E /* Foundation.framework */; };
 		F82E75B118ABDC4E002D596E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F82E75B018ABDC4E002D596E /* CoreGraphics.framework */; };
 		F82E75B318ABDC4E002D596E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F82E75B218ABDC4E002D596E /* UIKit.framework */; };
@@ -26,6 +27,8 @@
 		1A2CCFEE18E2674E009B50FF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1A2CCFF018E267C9009B50FF /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1A2CCFF118E267C9009B50FF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1A6CA64618E46F13000701FB /* AnimatedGIFImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedGIFImageView.h; sourceTree = "<group>"; };
+		1A6CA64718E46F13000701FB /* AnimatedGIFImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedGIFImageView.m; sourceTree = "<group>"; };
 		F82E75AB18ABDC4E002D596E /* Animated GIF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Animated GIF.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F82E75AE18ABDC4E002D596E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F82E75B018ABDC4E002D596E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -130,6 +133,8 @@
 			children = (
 				F83E7E5D18E1FCA900309F89 /* AnimatedGIFImageSerialization.h */,
 				F83E7E5E18E1FCA900309F89 /* AnimatedGIFImageSerialization.m */,
+				1A6CA64618E46F13000701FB /* AnimatedGIFImageView.h */,
+				1A6CA64718E46F13000701FB /* AnimatedGIFImageView.m */,
 			);
 			name = AnimatedGIFImageSerialization;
 			path = ../AnimatedGIFImageSerialization;
@@ -202,6 +207,7 @@
 			files = (
 				F83E7E5F18E1FCA900309F89 /* AnimatedGIFImageSerialization.m in Sources */,
 				F82E75BF18ABDC4E002D596E /* AppDelegate.m in Sources */,
+				1A6CA64818E46F13000701FB /* AnimatedGIFImageView.m in Sources */,
 				1A2CCFF218E267C9009B50FF /* ViewController.m in Sources */,
 				F82E75BB18ABDC4E002D596E /* main.m in Sources */,
 			);
